@@ -1,72 +1,175 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <title>Instagram</title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/87/87390.png">
+        
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Feed de Instagram</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+            <a class="navbar-brand  align-items-center ms-5" href="#"><i class="fa-brands fa-instagram mr-1"></i>
+                <span class="ms-1 fs-4"><b>Instagram</b></span>
+            </a>
 
-<body>
-  <nav class="navbar bg-body-tertiary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+                    <li class="nav-item">
+                      <button type="button" class="btn btn-success me-3" data-toggle="modal" data-target="#firstModal">
+                        Nueva publicación
+                      </button>
+                    </li>
+                    <li class="nav-item dropdown me-5">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownMenuButton">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="#">Perfil</a></li>
+                      <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+                      <li><a class="dropdown-item" href="#">Privacidad</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-danger" href="#">Cerrar sesión</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+    </nav>
+
+    
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <i class="fa-brands fa-instagram"></i>
-        Instagram
-      </a>
-      <div class="d-flex gap-5">
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          Crear un post nuevo
-        </button>
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Nuevo post</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Decripción:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Publicar</button>
-              </div>
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="pills-grid-tab" data-toggle="pill" href="#pills-grid" role="tab" aria-controls="pills-grid" aria-selected="true"><i class="fa-solid fa-th"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-colum-tab" data-toggle="pill" href="#pills-colum" role="tab" aria-controls="pills-colum" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+
+
+            <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+                <div class="container-fluid">
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <img src="https://diarioistmo.blob.core.windows.net/images/2024/03/08/akira-toriyama-creador-de-dragon-ball-focus-0.62-0.53-600-400.png" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://wallpapercave.com/wp/wp2650580.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://larepublica.cronosmedia.glr.pe/original/2022/08/31/630ffc5fdd468f6d47331308.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <img src="https://sm.ign.com/ign_latam/screenshot/default/eren-titan-forma-final-fundador-temporada-4_vjt6.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://cinepremiere.com.mx/wp-content/uploads/2020/05/gigante-hierro-razones-1024x559.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://media.meer.com/attachments/79ae395af6e1332f2f3fc4fce368b3feb48e9fa5/store/fill/1090/613/1c151c8b78963d542e0c60042f70c2561873ab32a87390e516d835ce5948/Fotograma-de-Eren-Jaeger-protagonista-de-la-serie-Ataque-a-los-titanes.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <img src="https://s1.1zoom.me/big0/26/219855-SweetAngel.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://www.akiracomics.com/imagenes/poridentidad?identidad=585a0472-2bca-41af-8384-db7153691650&ancho=850&alto=" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                        <div class="col-4">
+                            <img src="https://elcomercio.pe/resizer/tE6PtaDRghKOQhvVPiZwbedIAaM=/1200x900/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/PTGU6VFE3BFWZPYW7IBQJCPCBI.jpg" alt="x" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="tab-pane fade d-flex flex-column align-items-center" id="pills-colum" role="tabpanel" aria-labelledby="pills-colum-tab">
+                <div class="post border mb-3 m-3 h-auto" style="width: 500px;">
+                    <div class="postHeader d-flex justify-content-between h-auto p-3">
+                        <h3>Homenaje a Akira Toriyama</h3>
+                        <p>1/03/24</p>
+                    </div>
+                    <div class="pstImg w-500">
+                        <img src="https://diarioistmo.blob.core.windows.net/images/2024/03/08/akira-toriyama-creador-de-dragon-ball-focus-0.62-0.53-600-400.png" class="mw-100" alt="">
+                    </div>
+                    <div class="postFooter p-3">
+                        <p><strong>Les gusta a 70k personas</strong></p>
+                        <p>Post en homenaje al padre del shonen. DEP LEYENDA 🧡​💙​</p>
+                    </div>
+                </div>
+            
+                <div class="post border mb-3 m-3 h-auto" style="width: 500px;">
+                    <div class="postHeader d-flex justify-content-between h-auto p-3">
+                        <h3>Mi trílogia favorita</h3>
+                        <p>22/06/24</p>
+                    </div>
+                    <div class="pstImg w-500">
+                        <img src="https://wallpapercave.com/wp/wp2650580.jpg" class="mw-100" alt="">
+                    </div>
+                    <div class="postFooter p-3">
+                        <p><strong>Les gusta a 20k personas</strong></p>
+                        <p>No podía dejar fuera una de mis sagas favoritas del cine. El señor de los anillos, y de fondo, uno de mis villanos favoritos, Sauron. </p>
+                    </div>
+                </div>
+            
+                <div class="post border mb-3 m-3 h-auto" style="width: 500px;">
+                    <div class="postHeader d-flex justify-content-between h-auto p-3">
+                        <h3>Mi infancia</h3>
+                        <p>22/06/24</p>
+                    </div>
+                    <div class="pstImg w-500">
+                        <img src="https://larepublica.cronosmedia.glr.pe/original/2022/08/31/630ffc5fdd468f6d47331308.jpg" class="mw-100" alt="">
+                    </div>
+                    <div class="postFooter p-3">
+                        <p><strong>Les gusta a 1997 personas</strong></p>
+                        <p>Este post es una mención honorífica a una de mis películas favoritas de mi infancia de lejos. El gigante de hierro, una película que cada vez que la veo aún me saca una lágrima al final.</p>
+                    </div>
+                </div>
             </div>
           </div>
-        </div>
-        <div class="dropdown me-5">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <i class="fa-solid fa-gear"></i>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" type="button">Perfil</a></li>
-            <li><a class="dropdown-item" type="button">Accesibilidad</a></li>
-            <li><a class="dropdown-item" type="button">Privacidad</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-danger " type="button">Cerrar sesión</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </nav>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-</body>
+    
+    <div class="modal fade" id="firstModal" tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="firstModalLabel">Crear una nueva publicación</h1>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="Text"><strong>Descripción:</strong></label> <br>
+                    <br>
+                    <textarea placeholder="Escribe un texto..." class="form-control" cols="20" rows="3"></textarea>
+                    <br>
+                  <button type="button" class="btn btn-light border"><i class="fa-solid fa-camera"></i></button>
+                  <button type="button" class="btn btn-light border"><i class="fa-solid fa-location-dot"></i></button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Publicar</button>
+                  </div>
+            </div>
+        </div>
+    </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
